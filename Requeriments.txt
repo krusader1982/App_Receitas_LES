@@ -1,0 +1,6 @@
+flask~=1.1.2
+flask_sqlalchemy
+pymysql
+sqlalchemy
+python-dotenv~=0.15.0
+gunicorn
