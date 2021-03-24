@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color:  #005b8f;
+    font-family: sans-serif;
+    font-size: 1em;
+    color: #5c925c;
+    margin-left: 0%;
+    margin-top: 2%;
+    justify-content: center;
+}
+
+#titulo {
+    font-family:   sans-serif;
+    color: #daf1ff;
+    text-align:center;
+    font-size: 80px;   
+}
+
+#rotulo {
+    font-family:   sans-serif;
+    color: #daf1ff;
+    text-align:left;
+    font-size: 36px;   
+}
+
+.rotulo{
+    font-family:   sans-serif;
+    color: #daf1ff;
+    text-align:left;
+    font-size: 24px;
+}
+
+.campo label {
+    align-items: left;
+    color: #daf1ff;
+    display: inline-block;
+    font-size: 16px;
+    padding: 0%;
+    padding-left: 10px;
+}
+
+.btn {
+    font-size: 1.2em;
+    background: #10009d;
+    border: 0;
+    margin-bottom: 1em;
+    color: #ffffff;
+    padding: 0.2em 0.6em;
+    box-shadow: 2px 2px 2px rgb(255, 255, 255);
+    text-shadow: 1px 1px 1px rgba(26, 0, 175, 0.5);
+    position: absolute;
+    margin-top: 1%;
+    margin-left: 5%;
+    transform: translate(-50%, -50%)
+}

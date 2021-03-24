@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+
+    <head>
+        <!-- Metadados -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <script src="https://kit.fontawesome.com/57ecf32101.js" crossorigin="anonymous"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        
+
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='usuario.css')}}" media="screen">
+
+        <!-- Título da página (aparece na aba) -->
+        <title>Seu Caderno de Receitas</title>
+    </head>
+
+    <body>  
+
+        <!-- Cabeçalho com título e subtítulo (ambos com css de id "titulo") -->
+        <div>
+            <!--<img class="hat" src="book1.png" />-->
+               
+            <h1 id="titulo">Seu<br>Caderno de Receitas</h1>
+            <br><br>
+      
+        </div>
+
+        <!-- Início do formulário -->
+        <form>
+
+
+            
+
+            <fieldset class="grupo">
+                <!-- Campo do nome com legenda "nome" e css de classe "campo" -->
+
+                 <!-- Campo de email com-->
+                <!--<div class="campo">
+                    <label for="email"><strong>Email</strong></label>
+                    <input type="email" name="email" size="30" id="email" required>
+                </div>-->
+
+
+            </fieldset> 
+
+            <fieldset class="grupo">
+                <!-- Campo do nome com legenda "nome" e css de classe "campo" -->
+
+             <!--<div class="campo">
+                <label for="pass"><strong>Senha</strong></label>
+                 <input type="password"  name="nome" size="30" id="nome" required >
+             </div>-->
+
+            </fieldset> 
+
+
+            <br>
+ 
+            <!-- Botão para enviar o formulário -->
+            <a href="/receita">
+                <button class="botaoMyRec" type="button" onsubmit="">Minhas Receitas</button> 
+            </a>
+            <a href="/ingrediente">
+                <button class="botaoSendRec" type="button" onsubmit="">Cadastrar Ingrediente</button> 
+            </a>      
+            <div class="search-box">
+                <input class="search-txt" type="text" name="" placeholder="Pesquisar">
+                <a class="search-btn">
+                    <i class="fas fa-search"></i>                    
+                </a>
+            </div>
+
+
+        </form>
+
+    </body>
+
+</html>

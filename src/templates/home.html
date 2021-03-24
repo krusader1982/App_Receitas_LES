@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+    <head>
+        <!-- Metadados -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='home.css')}}" media="screen">
+       
+        <!-- Título da página (aparece na aba) -->
+        <title>Seu Caderno de Receitas</title>
+    </head>
+
+    <body>  
+        <!-- Cabeçalho com título e subtítulo (ambos com css de id "titulo") -->
+        <div>
+            <h1 id="titulo">Seu<br>Caderno de Receitas</h1>
+            <br>
+            <br>
+        </div>
+        <!-- Início do formulário -->
+        <form>
+            <fieldset class="grupo">
+                <!-- Campo do nome com legenda "nome" e css de classe "campo" -->
+                 <!-- Campo de email com-->
+                <div class="campo">
+                    <label for="email"><strong>Email</strong></label>
+                    <input type="email" name="email" size="30" id="email" required>
+                </div>
+            </fieldset> 
+            <fieldset class="grupo">
+                <!-- Campo do nome com legenda "nome" e css de classe "campo" -->
+             <div class="campo">
+                <label for="pass"><strong>Senha</strong></label>
+                 <input type="password"  name="nome" size="30" id="nome" required >
+             </div>
+            </fieldset> 
+            <br>
+                <!-- Botão para enviar o formulário -->
+            <div>
+            <a href="/usuario">
+            <button  class="botao"  type="button" onsubmit="" >Entrar</button> 
+            </a>
+            </div>
+        </form>
+            <!--<div class="Login">Não tem uma conta?
+                <a tabindex="-1" href="Usuario.html" class="Logar">Criar</a>
+            </div>-->
+    </body>
+</html>

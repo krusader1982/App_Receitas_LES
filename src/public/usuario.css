@@ -1,0 +1,324 @@
+/* Todos os elementos da página */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Elementos com o ID "titulo" */
+#titulo {
+    font-family:   sans-serif;
+    color: #daf1ff;
+    text-align:center;
+    font-size: 80px;
+} 
+
+/* Elementos com o ID "subtitulo" */
+#subtitulo {
+    font-family: sans-serif;
+    color: #daf1ff;
+} 
+
+#check{
+    display: inline-block;
+}
+
+#radio{
+    display: inline-block;
+    
+}
+/* Elementos de tag <fieldset>*/
+fieldset {
+    border: 0;
+    margin-left: 20%;
+    margin-top: 0%;
+    font-family: sans-serif;
+    color:  #daf1ff;
+    
+}
+
+
+
+
+.Login{
+    font-family: sans-serif;
+    text-align: center;
+    border: 0;
+    color:  #daf1ff;
+    font-size: 15px;
+    margin-top: 2%;
+    margin-left: 4%;
+}
+
+.Logar{
+    font-family: sans-serif;
+    text-align: center;
+    border: 0;
+    color:  #10009d;
+    font-size: 15px;
+    margin-top: 7%;
+}
+
+
+/* Elemento de tag <body> */
+body{
+    background-color: /*#fff0b0*/ #005b8f;
+    font-family: sans-serif;
+    font-size: 1em;
+    color: #5c925c; /*#9d6a00*/;
+    margin-left: 0%;
+    margin-top: 2%;
+    justify-content: center;
+}
+
+/* Elementos de tags <body>, <input>, <Select>, <textarea> e <button> */
+input, select, textarea, button {
+    font-family: sans-serif;
+    font-size: 1em;
+    color: *#59429d;
+    border-radius: 10px;
+}
+
+/* Elementos de classe "grupo" nos estados das pseudoclasses "before" e "after" */
+.grupo:before, .grupo:after {
+    display: table;
+}
+
+/* Elementos de classe "grupo" no estado da pseudoclasse "after" */
+.grupo:after {
+    clear: both;
+}
+
+/* Elementos de classe "campo" */
+.campo {
+    margin-bottom: 1em;
+}
+
+/* Elementos de classe "campo" de tag <label> */
+.campo label {
+    margin-top: 1%;
+    margin-left: 20%;
+    margin-bottom: 0.2em;
+    color: #daf1ff;
+    display: table;
+    
+    
+}
+
+/* Elementos de classe "campo" ou "grupo" de tag <fieldset> */
+fieldset.grupo .campo {
+    float:  left;
+    margin-right: 1em;
+    
+
+    
+}
+
+/* Elementos de classe "campo" das tags <input> com atributo text e email, da tag <select> e da tag <textarea>*/
+.campo input[type="text"], .campo input[type="email"],.campo input[type="password"], .campo select, .campo textarea {
+    padding: 0.2em;
+    border: 1px solid #59429d; 
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    display: block;
+}
+
+/* Elementos de classe "campo" de tag <select> e <option>*/
+.campo select option {
+    padding-right: 1em;
+}
+
+/* Elemento de classe "campo" com tag <input>, <select> e <textarea> tocas com estado da pseudoclasse "focus"*/
+.campo input:focus, .campo select:focus, .campo textarea:focus {
+    background: /*#E0E0F8;*/#00a1ff;
+}
+
+/* Elemento de classe "botao" */
+.botaoMyRec {
+    font-size: 1.2em;
+    background: /*#59429d;*/#01446b;
+    border: 0;
+    width:  240px;
+    margin-bottom: 1em;
+    color:#daf1ff;
+    padding: 0.2em 0.6em;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+
+}
+
+/* Elemento de classe "botao" com o estado da pseudoclasse "hover" */
+.botaoMyRec:hover {
+    background: #CCBBFF;
+    box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: none;
+}
+
+/* Elementos de classe botão e de tag <select> */
+.botaoMyRec, select{
+    cursor: pointer;
+}
+
+.botaoSendRec {
+    font-size: 1.2em;
+    background: #01446b;
+    border: 0;
+    width:  240px;
+    margin-bottom: 1em;
+    color: #daf1ff;
+    padding: 0.2em 0.6em;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    position: absolute;
+    top: 40%;
+    left: 75%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+
+}
+
+/* Elemento de classe "botao" com o estado da pseudoclasse "hover" */
+.botaoSendRec:hover {
+    background: #CCBBFF;
+    box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: none;
+}
+
+/* Elementos de classe botão e de tag <select> */
+.botaoSendRec, select{
+    cursor: pointer;
+}
+
+.search-box{
+    position:absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #01446b;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+}
+
+.search-box:hover > .search-txt{
+    width: 240px;
+    padding: 0 6;
+    background: #CCBBFF;
+    height: 25px;
+    
+}
+
+.search-box:hover{
+    height: 28px;
+    padding: 2px;
+    background: #CCBBFF;
+}
+
+.search-box:hover > .search-btn{
+    background: #01446b;
+    height: 25px;
+    width: 25px;
+    color: #daf1ff;
+}
+
+
+.search-btn{
+    color: #e84118;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #eff0f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+
+.hat{
+    width: 40px;
+    height: 40px;
+    vertical-align:middle;
+    transform: translate(-50%,-50%);
+    float: left;
+    border-radius: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+    margin-left: 30%;
+    
+}
+
+.search-txt{
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: white;
+    font-size: 1.2em;
+    transition: 0.4s;
+    line-height: 30px;
+    width: 0px;
+}
+
+.time{
+    position:absolute;
+    margin-top: 0%;   
+    margin-left: 38%;
+    transform: translate(-50%,-50%);
+    background: #01446b;
+    height: 40px;
+    width: 100;
+    border-radius: 30px;
+    padding: 0px;
+    align-items: center;
+    justify-content: center;
+}
+
+.min_prep{
+    position: absolute;
+    align-items: center;
+    height: 25px;  
+    width: 50px;
+    
+
+}
+
+.tem_prep_box{
+    position:absolute;
+    top: 40%;
+    left: 50%;
+    align-items: center;
+    background: #01446b;
+    height: 50px;
+    width: 150px;
+    border-radius: 20px;
+    padding: 0px;
+
+}
+
+.min_label{
+    color: #daf1ff;
+    align-items: center;
+    position:absolute;   
+}
+
+.tempo_de_preparo{
+    color: #daf1ff;
+    display: table;
+    margin-left: 270px;
+    padding: 5px;
+    padding-left: 10px;
+
+}
+
+.minutos_prep{
+    width: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+}

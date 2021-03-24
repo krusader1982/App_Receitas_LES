@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <!-- Metadados -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- CSS -->
+    <link rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" media="screen">
+       
+    <!-- Título da página (aparece na aba) -->
+    <title>Seu Caderno de Receitas</title>
+
+</head>
+
+<body>
+    <h1 stile="text-align:center;">Crud Ingredientes</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <a href="/add">Adicionar Ingredientes</a>
+                </div>
+            <div class="col-xs-12">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Ingrediente</th>
+                        <th>Quantidade</th>
+                        <th>Ações</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        {% for i in ingredientes %}
+                    <tr>
+                        <td>{{i.nome}}</td>
+                        <td>{{i.qtd}}</td>
+                        <td>
+                            <a href="/edit/{{i.id}}">Editar</a> |
+                            <a href="/delete/{{i.id}}">Excluir</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+            </div>
+        </div>
+    </div>
+    
+</body>
+

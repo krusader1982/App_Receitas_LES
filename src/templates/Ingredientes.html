@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <!-- Metadados -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- CSS DO BOOTSTRAP-->
+    <link rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" media="screen">
+     
+    <!-- CSS FOLDER PUBLIC-->
+    <!--<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='receita.css')}}" media="screen">-->
+
+
+
+    <!-- Título da página (aparece na aba) -->
+    <title>Seu Caderno de Receitas</title>
+
+</head>
+<body>
+    <h1 stile="text-align:center;">Cadastrar Ingrediente</h1>
+        <form action="/add" class="container" method="POST">
+            <div class="row">
+                <div class="col-md-6">
+                    <input type="text" name="nome" id="nome" placeholder="Nome do Ingrediente" class="form-control">
+                </div>
+                <div class="col-md-3">
+                    <input type="text" name="qtd" id="qtd" placeholder="Quantidade do Ingrediente" class="form-control">
+                </div>
+            </div>
+        <br>
+            <div class="col-xs-12">
+                <button type="submit" class="btn btn-block btn-primary">Adicionar</button>
+            </div>
+        <div class="col-xs-12">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Ingrediente</th>
+                <th>Quantidade</th>
+                <th>Ações</th>
+            </tr>
+            </thead>
+            <tbody>
+                {% for i in ingredientes %}
+            <tr>
+                <td>{{i.nome}}</td>
+                <td>{{i.qtd}}</td>
+                <td>
+                    <a href="/edit/{{i.id}}">Editar</a> |
+                    <a href="/delete/{{i.id}}">Excluir</a>
+                </td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+        <!--<section id="modo de preparo">
+        <div>
+            <h2 stile="text-align:center;">Modo de Preparo</h2>
+        </div>
+        <div>
+            <textarea rows="6" style="width: 40em" id="mod_pre_box" name="mod_pre_box"></textarea>
+        </div>-->
+        <br>
+        <div class="col-xs-2">
+            <a href="/usuario">
+            <button type="button" class="btn btn-block btn-success">Voltar</button>
+            </a>
+        </div>
+        </section>
+    </form>
+   </div>
+</body>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <!-- Metadados -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- CSS -->
+    <link rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" media="screen">
+       
+    <!-- Título da página (aparece na aba) -->
+    <title>Seu Caderno de Receitas</title>
+
+</head>
+
+<body>
+<h1 style="text-align:center;">Cadastrar novo ingrediente</h1>
+<form action="/add" class="container" method="POST">
+    <div class="row">
+        <div class="col-md-6">
+            <input type="text" name="nome" id="nome" placeholder="nome" class="form-control">
+        </div>
+        <div class="col-md-6">
+            <input type="text" name="qtd" id="qtd" placeholder="quantidade" class="form-control">
+        </div>
+    </div>
+    <br>
+    <div class="col-xs-12">
+        <button type="submit" class="btn btn-block btn-sucess">Enviar</button>
+    </div>
+</form>
+</body>
