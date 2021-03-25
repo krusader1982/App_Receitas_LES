@@ -40,7 +40,7 @@ git pull
 
 - Instalação das dependências
 ```
-pip install -r requeriments.txt
+pip install -r requirements.txt
 ```
 
 - Iniciar o projeto

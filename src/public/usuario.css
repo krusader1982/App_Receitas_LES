@@ -322,3 +322,10 @@ fieldset.grupo .campo {
     margin-left: 10px;
     margin-right: 10px;
 }
+
+.receitas{
+    margin-left: 20%;
+    color: #daf1ff;
+    align-items: center;
+    font-size: 20px;
+}

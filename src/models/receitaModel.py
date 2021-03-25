@@ -16,6 +16,3 @@ class Receita(db.Model):
     criado_em = db.Column(db.DateTime, server_default=db.func.now())
     atualizado_em = db.Column(db.DateTime, server_default=db.func.now(), server_onupdate=db.func.now())
 
-if __name__ == "__main__":
-    db.create_all()
-    app.run()

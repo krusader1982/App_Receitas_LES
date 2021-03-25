@@ -53,6 +53,11 @@ def enviar_receita():
     return render_template("Enviar_receita.html")
 
 
+##### MINHAS RECEITAS RECEITA #####
+@app.route("/minhas_receitas")
+def minhas_receitas():
+    return render_template("Minhas Receitas.html")
+
 ##### INGREDIENTE #####
 @app.route("/ingrediente")
 def ingrediente():
