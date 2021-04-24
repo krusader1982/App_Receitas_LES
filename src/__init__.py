@@ -4,8 +4,8 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__, template_folder="templates", static_folder="public")
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///ingredientes.sqlite3'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///receitas.sqlite3'
-
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///receitas.sqlite3'
+app.config.from_object('config')
 
 db = SQLAlchemy(app)
 
@@ -13,25 +13,29 @@ db = SQLAlchemy(app)
 class Ingrediente(db.Model):
     id = db.Column('id', db.Integer, primary_key=True, autoincrement=True)
     nome = db.Column(db.String(150), unique=True, nullable=False)
-    qtd = db.Column(db.Integer)
+#    qtd = db.Column(db.Integer)
     
 
-    def __init__(self, nome, qtd):
-        self.nome = nome
-        self.qtd = qtd
+#    def __init__(self, nome, qtd):
+#        self.nome = nome
+#        self.qtd = qtd
 
-class Receita(db.Model):
-    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    nome_receita = db.Column(db.String(50), unique=True, nullable=False)
-    ingredientes = db.Column(db.String(1000), nullable=False)
-    modo_preparo = db.column(db.String(5000))
-    criado_em = db.Column(db.DateTime, server_default=db.func.now())
-    atualizado_em = db.Column(db.DateTime, server_default=db.func.now(), server_onupdate=db.func.now())
-
-    def __init__(self, nome_receita, ingrediente, modo_preparo):
+    def __init__(self, nome):
         self.nome = nome
-        self.ingrediente = ingrediente
-        self.modo_preparo = modo_preparo
+
+
+#class Receita(db.Model):
+#    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+#    nome_receita = db.Column(db.String(50), unique=True, nullable=False)
+#    ingredientes = db.Column(db.String(1000), nullable=False)
+#    modo_preparo = db.column(db.String(5000))
+#    criado_em = db.Column(db.DateTime, server_default=db.func.now())
+#    atualizado_em = db.Column(db.DateTime, server_default=db.func.now(), server_onupdate=db.func.now())
+#
+#    def __init__(self, nome_receita, ingrediente, modo_preparo):
+#        self.nome = nome
+#        self.ingrediente = ingrediente
+#        self.modo_preparo = modo_preparo
 
         
 
@@ -69,7 +73,8 @@ def ingrediente():
 @app.route("/add", methods=["GET", "POST"])
 def add():
     if request.method == "POST":
-        ingrediente = Ingrediente(request.form['nome'], request.form['qtd'])
+#        ingrediente = Ingrediente(request.form['nome'], request.form['qtd'])
+        ingrediente = Ingrediente(request.form['nome'])
         db.session.add(ingrediente)
         db.session.commit()
         return redirect(url_for("ingrediente"))
@@ -82,7 +87,7 @@ def edit(id):
     ingrediente = Ingrediente.query.get(id)
     if request.method == "POST":
         ingrediente.nome = request.form['nome']
-        ingrediente.qtd = request.form["qtd"]
+#        ingrediente.qtd = request.form["qtd"]
         db.session.commit()
         return redirect(url_for("ingrediente"))
     return render_template("edit.html", ingrediente=ingrediente)
