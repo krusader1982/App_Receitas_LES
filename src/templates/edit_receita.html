@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <!-- Metadados -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    
+    
+    <!-- CSS FOLDER PUBLIC-->
+   <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='bootstrap.css')}}" 
+   media="screen">
+
+    <!-- Título da página (aparece na aba) -->
+    <title>Seu Caderno de Receitas</title>
+
+</head>
+
+<body>
+<h1 style="text-align:center;">Editar receita {{ receita.nome }}</h1>
+    <form action="/edit_receita/{{ receita.id }} " class="container" method="POST">
+        <div class="row">
+            <div class="col-md-6">
+                <input type="text" name="nome" id="nome" placeholder="Nome da Receita" class="form-control" value="{{ receita.nome }}">
+            </div>
+            <div class="form-group">
+                <label>Modo de Preparo</label>
+                <input type="text" class="form-control" name="modo_preparo" id="modo_preparo" value="{{ receita.modo_preparo }}">
+            </div>
+        </div>
+            <br>
+            <div class="col-xs-12">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+    </form>
+</body>

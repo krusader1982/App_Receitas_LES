@@ -6,8 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
     <!-- CSS -->
-    <link rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" media="screen">
-       
+    <!--<link rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" 
+    media="screen">-->
+     
+    <!-- CSS FOLDER PUBLIC-->
+   <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='bootstrap.css')}}" 
+   media="screen">
+
     <!-- Título da página (aparece na aba) -->
     <title>Seu Caderno de Receitas</title>
 
@@ -20,13 +25,10 @@
         <div class="col-md-6">
             <input type="text" name="nome" id="nome" placeholder="nome" class="form-control" value="{{ ingrediente.nome }}" >
         </div>
-    <!--<div class="col-md-3">
-            <input type="text" name="qtd" id="qtd" placeholder="quantidade" class="form-control" value="{{ ingrediente.qtd }}" >
-        </div>-->
     </div>
     <br>
     <div class="col-xs-12">
-        <button type="submit" class="btn btn-block btn-sucess">Enviar</button>
+        <button type="submit" class="btn btn-primary">Enviar</button>
     </div>
 </form>
 </body>

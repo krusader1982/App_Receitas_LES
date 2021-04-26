@@ -10,15 +10,19 @@
    media="screen">
 
     <!-- Título da página (aparece na aba) -->
-    <title>Ingredientes</title>
+    <title>Receitas</title>
 </head>
+
 <body>
-    <body>
-        <h1 style="text-align:center;">Cadastrar Ingrediente</h1>
-            <form action="/add" class="container" method="POST">
+        <h1 style="text-align:center;">Cadastrar Receita</h1>
+            <form action="/add_receita" class="container" method="POST">
                 <div class="row">
                     <div class="col-md-6">
-                        <input type="text" name="nome" id="nome" placeholder="Nome do Ingrediente" class="form-control">
+                        <input type="text" name="nome" id="nome" placeholder="Nome da Receita" class="form-control">
+                    </div>
+                    <div>
+                        <label>Modo de Preparo</label>
+                        <textarea class="form-control" name="modo_preparo" id="modo_preparo" rows="3"></textarea>
                     </div>
                 </div>
             <br>
@@ -30,18 +34,21 @@
                 <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Ingrediente</th>
+                    <th>Receita</th>
+                    <th>Modo de Preparo</th>
                     <th>Ações</th>
                 </tr>
                 </thead>
                 <tbody>
-                    {% for i in ingredientes %}
+                    {% for r in receitas %}
                 <tr>
-                    <td>{{i.id}}</td>
-                    <td>{{i.nome}}</td>
+                    <td>{{r.id}}</td>
+                    <td>{{r.nome}}</td>
+                    <td>{{r.modo_preparo}}</td>
                     <td>
-                        <a href="/edit/{{i.id}}">Editar</a> |
-                        <a href="/delete/{{i.id}}">Excluir</a>
+                        <a href="/itens_receita/{{r.id}}">Adicionar itens</a> |
+                        <a href="/edit_receita/{{r.id}}">Editar</a> |
+                        <a href="/delete_receita/{{r.id}}">Excluir</a>
                     </td>
                 </tr>
                 {% endfor %}
@@ -57,5 +64,4 @@
             </section>
         </form>
        </div>
-    </body>
 </body>
