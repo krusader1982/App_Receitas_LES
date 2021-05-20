@@ -61,3 +61,9 @@ http://127.0.0.1/5000/
 Email=usuario@usuario
 Senha=12345
 ```
+
+## Entregas parciais
+
+- [Entrega 1 - Protótipo navegável](https://youtu.be/EYth8GWZtCc)
+
+- [Entrega 2 - Protótipo navegável]
