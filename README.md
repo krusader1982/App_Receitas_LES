@@ -52,7 +52,7 @@ python __init__.py
 
 - No navegador utilize
 ```
-http://127.0.0.1/5000/
+http://127.0.0.1:5000/
 ```
 
 - Tela inicial
