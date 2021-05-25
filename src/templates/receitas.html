@@ -22,7 +22,7 @@
                     </div>
                     <div>
                         <label>Modo de Preparo</label>
-                        <textarea class="form-control" style="text-transform:uppercase" onblur="uppercase()" name="modo_preparo" id="modo_preparo" rows="3"></textarea>
+                        <textarea class="form-control" style="text-transform:uppercase" onblur="uppercase1()" name="modo_preparo" id="modo_preparo" rows="3"></textarea>
                     </div>
                 </div>
             <br>
@@ -70,5 +70,12 @@
     {
         var x = document.getElementById("nome");
         x.value = x.value.toUpperCase()
+    }
+</script>
+<script>
+    function uppercase1()
+    {
+        var z = document.getElementById("modo_preparo");
+        z.value = z.value.toUpperCase()
     }
 </script>

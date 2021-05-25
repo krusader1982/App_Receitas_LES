@@ -28,11 +28,11 @@
             <br>
             <div class="row">
                 <div class="col-md-4">
-                    <input type="text"  name="ingrediente_id" id="ingrediente_id" placeholder="Campo do ingrediente(LETRA MAIÚSCULA)" class="form-control">
+                    <input type="text"  style="text-transform:uppercase"  onblur="uppercase()" name="ingrediente_id" id="ingrediente_id" placeholder="Campo do ingrediente" class="form-control">
                 </div>
-                <div class="col-md-4">
+                <!--<div class="col-md-4">
                     <input type="text" name="qtd" id="qtd" placeholder="Quantidade" class="form-control">
-                </div>
+                </div>-->
             </div>
         <br>
             <div class="col-xs-12">
@@ -70,7 +70,7 @@
 <script>
     function uppercase()
     {
-        var x = document.getElementById("nome");
+        var x = document.getElementById("ingrediente_id");
         x.value = x.value.toUpperCase()
     }
 </script>
