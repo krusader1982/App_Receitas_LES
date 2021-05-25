@@ -66,4 +66,4 @@ Senha=12345
 
 - [Entrega 1 - Protótipo navegável](https://youtu.be/EYth8GWZtCc)
 
-- [Entrega 2 - Protótipo navegável]
+- [Entrega 2 - Protótipo navegável](https://youtu.be/hF0gTUA15fU)
