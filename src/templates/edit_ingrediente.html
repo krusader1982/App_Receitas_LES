@@ -5,13 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
-    <!-- CSS -->
-    <!--<link rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" 
-    media="screen">-->
-     
     <!-- CSS FOLDER PUBLIC-->
-   <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='bootstrap.css')}}" 
-   media="screen">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='bootstrap.css')}}" 
+        media="screen">
 
     <!-- Título da página (aparece na aba) -->
     <title>Seu Caderno de Receitas</title>
@@ -20,10 +16,10 @@
 
 <body>
 <h1 style="text-align:center;">Editar ingrediente {{ ingrediente.nome }}</h1>
-<form action="/edit/{{ ingrediente.id }} " class="container" method="POST">
+<form action="/edit/{{ ingrediente.ingrediente_id }} " class="container" method="POST">
     <div class="row">
         <div class="col-md-6">
-            <input type="text" name="nome" id="nome" placeholder="nome" class="form-control" value="{{ ingrediente.nome }}" >
+            <input style="text-transform:uppercase" type="text" onblur="uppercase()" name="nome" id="nome" placeholder="nome" class="form-control" value="{{ ingrediente.nome }}" >
         </div>
     </div>
     <br>
@@ -32,3 +28,10 @@
     </div>
 </form>
 </body>
+<script>
+    function uppercase()
+    {
+        var x = document.getElementById("nome");
+        x.value = x.value.toUpperCase()
+    }
+</script>

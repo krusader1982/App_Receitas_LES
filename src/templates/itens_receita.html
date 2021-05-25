@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <!-- Metadados -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    
+    
+    <!-- CSS FOLDER PUBLIC-->
+   <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='bootstrap.css')}}" 
+   media="screen">
+
+    <!-- Título da página (aparece na aba) -->
+    <title>Seu Caderno de Receitas</title>
+
+</head>
+
+<body>
+<h1 style="text-align:center;">Adicionar itens na receita {{ receita.nome }}</h1>
+    <form action="/itens_receita/{{ receita.receita_id }} " class="container" method="POST">
+            <div class="row">
+                                
+                <div class="col-md-4">
+                    <input type="text" name="receita_id" id="receita_id" placeholder="Campo da receita" class="form-control" value="{{ receita.nome}}" >
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-4">
+                    <input type="text"  name="ingrediente_id" id="ingrediente_id" placeholder="Campo do ingrediente(LETRA MAIÚSCULA)" class="form-control">
+                </div>
+                <div class="col-md-4">
+                    <input type="text" name="qtd" id="qtd" placeholder="Quantidade" class="form-control">
+                </div>
+            </div>
+        <br>
+            <div class="col-xs-12">
+                <button type="submit" class="btn btn-block btn-primary">Adicionar</button>
+            </div>
+        <div class="col-xs-12">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Ingrediente</th>
+                <th>Ações</th>
+            </tr>
+            </thead>
+            <tbody>
+                {% for ingrediente in receita.ingredientes %}
+            <tr>
+                <td>{{ingrediente.nome}}</td>
+                
+                <!--<td>
+                    <a href="/edit/{{ingrediente.ingrediente_id}}">Editar</a> |
+                    <a href="/delete_item/{{ingrediente.ingrediente_id}}">Excluir</a>
+                </td>-->
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <br>
+        <div class="col-xs-2">
+            <a href="/receita">
+            <button type="button" class="btn btn-block btn-success">Voltar</button>
+            </a>
+        </div>
+    </form>
+</body>
+<script>
+    function uppercase()
+    {
+        var x = document.getElementById("nome");
+        x.value = x.value.toUpperCase()
+    }
+</script>

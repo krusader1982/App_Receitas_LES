@@ -4,8 +4,6 @@
     <!-- Metadados -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    
     
     <!-- CSS FOLDER PUBLIC-->
    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='bootstrap.css')}}" 
@@ -18,7 +16,7 @@
 
 <body>
 <h1 style="text-align:center;">Editar receita {{ receita.nome }}</h1>
-    <form action="/edit_receita/{{ receita.id }} " class="container" method="POST">
+    <form action="/edit_receita/{{ receita.receita_id }} " class="container" method="POST">
         <div class="row">
             <div class="col-md-6">
                 <input type="text" name="nome" id="nome" placeholder="Nome da Receita" class="form-control" value="{{ receita.nome }}">

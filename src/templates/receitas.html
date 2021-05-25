@@ -18,11 +18,11 @@
             <form action="/add_receita" class="container" method="POST">
                 <div class="row">
                     <div class="col-md-6">
-                        <input type="text" name="nome" id="nome" placeholder="Nome da Receita" class="form-control">
+                        <input type="text" style="text-transform:uppercase" onblur="uppercase()" name="nome" id="nome" placeholder="Nome da Receita" class="form-control">
                     </div>
                     <div>
                         <label>Modo de Preparo</label>
-                        <textarea class="form-control" name="modo_preparo" id="modo_preparo" rows="3"></textarea>
+                        <textarea class="form-control" style="text-transform:uppercase" onblur="uppercase()" name="modo_preparo" id="modo_preparo" rows="3"></textarea>
                     </div>
                 </div>
             <br>
@@ -42,13 +42,13 @@
                 <tbody>
                     {% for r in receitas %}
                 <tr>
-                    <td>{{r.id}}</td>
+                    <td>{{r.receita_id}}</td>
                     <td>{{r.nome}}</td>
                     <td>{{r.modo_preparo}}</td>
                     <td>
-                        <a href="/itens_receita/{{r.id}}">Adicionar itens</a> |
-                        <a href="/edit_receita/{{r.id}}">Editar</a> |
-                        <a href="/delete_receita/{{r.id}}">Excluir</a>
+                        <a href="/itens_receita/{{r.receita_id}}">Adicionar itens</a> |
+                        <a href="/edit_receita/{{r.receita_id}}">Editar</a> |
+                        <a href="/delete_receita/{{r.receita_id}}">Excluir</a>
                     </td>
                 </tr>
                 {% endfor %}
@@ -65,3 +65,10 @@
         </form>
        </div>
 </body>
+<script>
+    function uppercase()
+    {
+        var x = document.getElementById("nome");
+        x.value = x.value.toUpperCase()
+    }
+</script>

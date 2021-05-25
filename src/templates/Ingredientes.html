@@ -9,20 +9,25 @@
    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='bootstrap.css')}}" 
    media="screen">
 
+   <script href="{{url_for('static', filename='utils.js')}}"></script>
+
     <!-- Título da página (aparece na aba) -->
     <title>Ingredientes</title>
 </head>
-<body>
+
     <body>
         <h1 style="text-align:center;">Cadastrar Ingrediente</h1>
             <form action="/add" class="container" method="POST">
                 <div class="row">
                     <div class="col-md-6">
-                        <input type="text" name="nome" id="nome" placeholder="Nome do Ingrediente" class="form-control">
+                        <input   style="text-transform:uppercase" type="text" onblur="uppercase()" name="nome" id="nome" placeholder="Nome do Ingrediente" class="form-control">
                     </div>
                 </div>
             <br>
                 <div class="col-xs-12">
+                    <a href="/usuario">
+                        <button type="button" class="btn btn-block btn-success">Voltar</button>
+                    </a>
                     <button type="submit" class="btn btn-block btn-primary">Adicionar</button>
                 </div>
             <div class="col-xs-12">
@@ -37,11 +42,11 @@
                 <tbody>
                     {% for i in ingredientes %}
                 <tr>
-                    <td>{{i.id}}</td>
+                    <td>{{i.ingrediente_id}}</td>
                     <td>{{i.nome}}</td>
                     <td>
-                        <a href="/edit/{{i.id}}">Editar</a> |
-                        <a href="/delete/{{i.id}}">Excluir</a>
+                        <a href="/edit/{{i.ingrediente_id}}">Editar</a> |
+                        <a href="/delete/{{i.ingrediente_id}}">Excluir</a>
                     </td>
                 </tr>
                 {% endfor %}
@@ -58,4 +63,11 @@
         </form>
        </div>
     </body>
-</body>
+
+    <script>
+        function uppercase()
+        {
+            var x = document.getElementById("nome");
+            x.value = x.value.toUpperCase()
+        }
+    </script>
